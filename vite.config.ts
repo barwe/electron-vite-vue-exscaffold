@@ -50,9 +50,11 @@ function withDebug(config: UserConfig): UserConfig {
     config.plugins = (config.plugins || []).concat({
       name: 'electron-vite-debug',
       configResolved(config) {
-        const index = config.plugins.findIndex(p => p.name === 'electron-main-watcher');
+        const index = config.plugins.findIndex(
+          p => p.name === 'electron-main-watcher'
+        )
         // At present, Vite can only modify plugins in configResolved hook.
-        (config.plugins as Plugin[]).splice(index, 1)
+        ;(config.plugins as Plugin[]).splice(index, 1)
       },
     })
   }
