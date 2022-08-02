@@ -1,0 +1,8 @@
+*rc.js
+*.json5
+*.md
+pnpm-lock.yaml
+.github/
+.vscode/
+release/
+dist/
