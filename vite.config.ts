@@ -60,6 +60,15 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
 })
 
 function withDebug(config: UserConfig): UserConfig {
