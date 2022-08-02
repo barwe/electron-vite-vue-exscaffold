@@ -6,6 +6,8 @@ import electron from 'vite-plugin-electron'
 import pkg from './package.json'
 
 import autoImport from 'unplugin-auto-import/vite'
+import autoVueComponents from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
 rmSync('dist', { recursive: true, force: true }) // v14.14.0
 
@@ -41,6 +43,9 @@ export default defineConfig({
     autoImport({
       imports: ['vue', 'vue-router'],
       eslintrc: { enabled: true },
+    }),
+    autoVueComponents({
+      resolvers: [NaiveUiResolver()],
     }),
   ],
   server: {
