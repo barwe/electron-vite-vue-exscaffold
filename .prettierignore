@@ -1,7 +1,7 @@
-*rc.js
 *.json5
 *.md
 pnpm-lock.yaml
+.eslintrc-auto-import.json
 .github/
 .vscode/
 release/

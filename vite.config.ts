@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import electron from 'vite-plugin-electron'
 import pkg from './package.json'
 
+import autoImport from 'unplugin-auto-import/vite'
+
 rmSync('dist', { recursive: true, force: true }) // v14.14.0
 
 // https://vitejs.dev/config/
@@ -35,6 +37,10 @@ export default defineConfig({
       },
       // Enables use of Node.js API in the Renderer-process
       renderer: {},
+    }),
+    autoImport({
+      imports: ['vue', 'vue-router'],
+      eslintrc: { enabled: true },
     }),
   ],
   server: {
