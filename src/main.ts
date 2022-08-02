@@ -6,6 +6,8 @@ import router from './router'
 import { createPinia } from 'pinia'
 const pinia = createPinia()
 
+import 'virtual:windi.css'
+
 createApp(App)
   .use(router)
   .use(pinia)

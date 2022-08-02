@@ -10,6 +10,7 @@ import autoVueComponents from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import WindiCSS from 'vite-plugin-windicss'
 
 rmSync('dist', { recursive: true, force: true }) // v14.14.0
 
@@ -50,6 +51,7 @@ export default defineConfig({
       resolvers: [NaiveUiResolver(), IconsResolver()],
     }),
     Icons(),
+    WindiCSS(),
   ],
   server: {
     host: pkg.env.VITE_DEV_SERVER_HOST,
