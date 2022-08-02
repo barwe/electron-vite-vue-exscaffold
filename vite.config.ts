@@ -8,6 +8,8 @@ import pkg from './package.json'
 import autoImport from 'unplugin-auto-import/vite'
 import autoVueComponents from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 rmSync('dist', { recursive: true, force: true }) // v14.14.0
 
@@ -45,8 +47,9 @@ export default defineConfig({
       eslintrc: { enabled: true },
     }),
     autoVueComponents({
-      resolvers: [NaiveUiResolver()],
+      resolvers: [NaiveUiResolver(), IconsResolver()],
     }),
+    Icons(),
   ],
   server: {
     host: pkg.env.VITE_DEV_SERVER_HOST,
