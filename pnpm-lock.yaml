@@ -17,6 +17,7 @@ specifiers:
   vite: ^2.9.13
   vite-plugin-electron: ^0.8.1
   vue: ^3.2.37
+  vue-router: ^4.1.3
   vue-tsc: ^0.38.3
 
 devDependencies:
@@ -36,6 +37,7 @@ devDependencies:
   vite: registry.npmmirror.com/vite/2.9.14
   vite-plugin-electron: registry.npmmirror.com/vite-plugin-electron/0.8.4
   vue: registry.npmmirror.com/vue/3.2.37
+  vue-router: registry.npmmirror.com/vue-router/4.1.3_vue@3.2.37
   vue-tsc: registry.npmmirror.com/vue-tsc/0.38.8_typescript@4.7.4
 
 packages:
@@ -587,6 +589,12 @@ packages:
     dependencies:
       '@vue/compiler-dom': registry.npmmirror.com/@vue/compiler-dom/3.2.37
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.37
+    dev: true
+
+  registry.npmmirror.com/@vue/devtools-api/6.2.1:
+    resolution: {integrity: sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.2.1.tgz}
+    name: '@vue/devtools-api'
+    version: 6.2.1
     dev: true
 
   registry.npmmirror.com/@vue/reactivity-transform/3.2.37:
@@ -4389,6 +4397,18 @@ packages:
       semver: registry.npmmirror.com/semver/7.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  registry.npmmirror.com/vue-router/4.1.3_vue@3.2.37:
+    resolution: {integrity: sha512-XvK81bcYglKiayT7/vYAg/f36ExPC4t90R/HIpzrZ5x+17BOWptXLCrEPufGgZeuq68ww4ekSIMBZY1qdUdfjA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.1.3.tgz}
+    id: registry.npmmirror.com/vue-router/4.1.3
+    name: vue-router
+    version: 4.1.3
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.2.1
+      vue: registry.npmmirror.com/vue/3.2.37
     dev: true
 
   registry.npmmirror.com/vue-tsc/0.38.8_typescript@4.7.4:
