@@ -44,8 +44,14 @@ export default defineConfig({
       renderer: {},
     }),
     autoImport({
-      imports: ['vue', 'vue-router'],
       eslintrc: { enabled: true },
+      imports: [
+        'vue',
+        'vue-router',
+        {
+          electron: ['clipboard'],
+        },
+      ],
     }),
     autoVueComponents({
       resolvers: [NaiveUiResolver(), IconsResolver()],

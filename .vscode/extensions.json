@@ -1,6 +1,15 @@
 {
 	"recommendations": [
 		"Vue.volar",
-		"Vue.vscode-typescript-vue-plugin"
+		"Vue.vscode-typescript-vue-plugin",
+		"formulahendry.auto-close-tag",
+		"kevinkyang.auto-comment-blocks",
+		"formulahendry.auto-rename-tag",
+		"dbaeumer.vscode-eslint",
+		"mhutchie.git-graph",
+		"PKief.material-icon-theme",
+		"esbenp.prettier-vscode",
+		"alefragnani.project-manager",
+		"voorjaar.windicss-intellisense"
 	]
 }

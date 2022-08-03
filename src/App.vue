@@ -2,6 +2,11 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import HelloWorld from '@/components/HelloWorld.vue'
+const text = ref('')
+const f = () => {
+  // clipboard.writeText('barwe 123')
+  text.value = clipboard.readText()
+}
 </script>
 
 <template>
@@ -9,6 +14,10 @@
   <br />
   <button @click="$router.push('/hw')">HelloWorld</button>
   <button @click="$router.push('/')">Root</button>
+  <div>
+    <n-button @click="f">write to clipboard</n-button>
+    <p>{{ text }}</p>
+  </div>
 
   <div class="logo-box">
     <img style="height: 140px" src="@/assets/electron.png" />
