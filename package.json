@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "^5.32.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vueuse/core": "^9.0.2",
-    "electron": "^19.0.8",
+    "electron": "^23.1.1",
     "electron-builder": "^23.1.0",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
